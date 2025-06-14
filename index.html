@@ -12,13 +12,23 @@
       background: #000;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
       text-align: center;
       box-sizing: border-box;
-    }@keyframes spin {
+    }body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
@@ -27,7 +37,7 @@
   font-size: 2.5em;
   font-weight: bold;
   letter-spacing: 1px;
-  margin: 40px 0 20px 0;
+  margin-bottom: 20px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -85,7 +95,6 @@
 }
 
 footer {
-  margin-top: auto;
   width: 100%;
   background: #000;
   color: #888;
@@ -131,17 +140,18 @@ footer a:hover {
   </style>
 </head>
 <body>
-  <div class="logo">MIWITNESS</div>
-  <div class="input-box">
-    <input type="password" placeholder="INSERT KEYCODE">
-    <div class="submit-box"></div>
-  </div>
-  <div class="login-text">LOG IN</div>
-  <div class="circle-loader"></div>
-  <div class="subtext">
-    <span>"</span>it performs to protect <span>Until</span> you need its protection<span>"</span>
-  </div>
-  <footer>
+  <main>
+    <div class="logo">MIWITNESS</div>
+    <div class="input-box">
+      <input type="password" placeholder="INSERT KEYCODE">
+      <div class="submit-box"></div>
+    </div>
+    <div class="login-text">LOG IN</div>
+    <div class="circle-loader"></div>
+    <div class="subtext">
+      <span>"</span>it performs to protect <span>Until</span> you need its protection<span>"</span>
+    </div>
+  </main>  <footer>
     <a href="#" onclick="document.getElementById('disclaimerModal').style.display='block'">DISCLAIMER</a>
     <div>miwitness.org © 2025</div>
     <a href="#" onclick="document.getElementById('privacyModal').style.display='block'">PRIVACY</a>
