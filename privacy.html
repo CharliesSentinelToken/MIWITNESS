@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIWITNESS Access</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+      overflow: hidden;
+    }@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  position: relative;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.input-box {
+  border: 2px solid #fff;
+  display: flex;
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+.input-box input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  background: black;
+  color: white;
+  outline: none;
+}
+
+.input-box .submit-box {
+  width: 40px;
+  background: orange;
+}
+
+.login-text {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+.circle-loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid orange;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+}
+
+.subtext {
+  font-size: 1em;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+}
+
+.subtext span {
+  color: orange;
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #888;
+  font-size: 0.8em;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+footer a {
+  color: #888;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <div class="logo">MIWITNESS</div>
+  <div class="input-box">
+    <input type="password" placeholder="INSERT KEYCODE">
+    <div class="submit-box"></div>
+  </div>
+  <div class="login-text">LOG IN</div>
+  <div class="circle-loader"></div>
+  <div class="subtext">
+    <span>"</span>it performs to protect <span>Until</span> you need it's protection<span>"</span>
+  </div>
+  <footer>
+    <a href="disclaimer.html">DISCLAIMER</a>
+    <div>miwitness.org © 2025</div>
+    <a href="privacy.html">PRIVACY</a>
+  </footer>
+</body>
+</html>
