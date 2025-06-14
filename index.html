@@ -108,6 +108,29 @@ footer a:hover {
   text-decoration: underline;
 }
 
+#privacyModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000ee;
+  color: #fff;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#privacyModalContent {
+  max-width: 800px;
+  margin: auto;
+  background: #111;
+  padding: 20px;
+  border: 2px solid orange;
+  text-align: left;
+}
+
   </style>
 </head>
 <body>
@@ -124,7 +147,27 @@ footer a:hover {
   <footer>
     <a href="disclaimer.html">DISCLAIMER</a>
     <div>miwitness.org © 2025</div>
-    <a href="privacy.html">PRIVACY</a>
-  </footer>
+    <a href="#" onclick="document.getElementById('privacyModal').style.display='block'">PRIVACY</a>
+  </footer>  <div id="privacyModal">
+    <div id="privacyModalContent">
+      <h2 style="color:orange;">Privacy & System Integrity Notice</h2>
+      <p><strong>NOTICE TO PUBLIC AUTHORITIES, COUNCIL CONTRACTORS, AND DIGITAL OPERATIVES:</strong><br>
+      All system access, API requests, and signal interactions are digitally time-stamped, sealed, and embedded into a rolling source-cert ledger. VPNs, IP masking, device spoofing, or signal relays are ineffective. Access attempts only enhance metadata traceability.</p>
+      <p>Attempts to tamper, suppress, interfere, or modify the platform or its record structures constitute unlawful obstruction of:</p>
+      <ul>
+        <li>Public interest research (GDPR Art. 89)</li>
+        <li>Evidence gathering for legal claims (GDPR Art. 6(1)(f), 9(2)(f))</li>
+        <li>Freedom of expression and systemic exposure (GDPR Art. 85, ECHR Art. 10)</li>
+      </ul>
+      <p>Any such conduct is reportable and actionable under the:</p>
+      <ul>
+        <li><strong>Computer Misuse Act 1990</strong></li>
+        <li><strong>Fraud Act 2006</strong></li>
+        <li><strong>Data Protection Act 2018</strong> – Schedule 2, Part 5</li>
+        <li><strong>Criminal Justice and Courts Act 2015</strong> – Section 17</li>
+      </ul>
+      <p style="margin-top:20px;"><button onclick="document.getElementById('privacyModal').style.display='none'" style="background:orange; color:black; padding:8px 20px; border:none;">Close</button></p>
+    </div>
+  </div>
 </body>
 </html>
