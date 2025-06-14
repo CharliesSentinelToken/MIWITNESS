@@ -4,8 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MIWITNESS Access</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
       background: #000;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #fff;
@@ -13,22 +16,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
-      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
-    }.spinner-dot {
-  height: 12px;
-  width: 12px;
-  border: 3px solid orange;
-  border-top: 3px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  position: absolute;
-  top: -16px;
-  left: -6px;
-}
-
-@keyframes spin {
+      box-sizing: border-box;
+      overflow: hidden;
+    }@keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
@@ -45,9 +36,10 @@
 .input-box {
   border: 2px solid #fff;
   display: flex;
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   margin: 10px auto;
+  box-sizing: border-box;
 }
 
 .input-box input {
@@ -57,6 +49,7 @@
   font-size: 1em;
   background: black;
   color: white;
+  outline: none;
 }
 
 .input-box .submit-box {
@@ -83,7 +76,7 @@
 .subtext {
   font-size: 1em;
   margin: 15px auto;
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   color: white;
 }
@@ -100,18 +93,25 @@ footer {
   background: #000;
   color: #888;
   font-size: 0.8em;
-  padding: 5px 0;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+footer a {
+  color: #888;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
   </style>
 </head>
 <body>
-  <div class="logo">
-    <span class="spinner-dot"></span>MIWITNESS
-  </div>
+  <div class="logo">MIWITNESS</div>
   <div class="input-box">
     <input type="password" placeholder="INSERT KEYCODE">
     <div class="submit-box"></div>
@@ -122,9 +122,9 @@ footer {
     <span>"</span>it performs to protect <span>Until</span> you need it's protection<span>"</span>
   </div>
   <footer>
-    <div>DISCLAIMER</div>
+    <a href="disclaimer.html">DISCLAIMER</a>
     <div>miwitness.org © 2025</div>
-    <div>DISCLAIMER</div>
+    <a href="privacy.html">PRIVACY</a>
   </footer>
 </body>
 </html>
