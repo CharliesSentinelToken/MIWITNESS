@@ -6,26 +6,26 @@
   <style>
     body {
       margin: 0;
+      background: #000;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff;
-      color: #000;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       text-align: center;
-    }.spinner {
-  height: 10px;
-  width: 10px;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+    }.spinner-dot {
+  height: 12px;
+  width: 12px;
   border: 3px solid orange;
   border-top: 3px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  display: inline-block;
-  position: relative;
-  top: -10px;
-  left: -5px;
+  position: absolute;
+  top: -16px;
+  left: -6px;
 }
 
 @keyframes spin {
@@ -38,10 +38,12 @@
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 20px;
+  position: relative;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .input-box {
-  border: 2px solid #000;
+  border: 2px solid #fff;
   display: flex;
   width: 80%;
   max-width: 400px;
@@ -53,6 +55,8 @@
   border: none;
   padding: 10px;
   font-size: 1em;
+  background: black;
+  color: white;
 }
 
 .input-box .submit-box {
@@ -60,11 +64,28 @@
   background: orange;
 }
 
-.subtext {
+.login-text {
+  margin-top: 5px;
   font-size: 0.9em;
+}
+
+.circle-loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid orange;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+}
+
+.subtext {
+  font-size: 1em;
   margin: 15px auto;
   width: 80%;
   max-width: 400px;
+  color: white;
 }
 
 .subtext span {
@@ -72,26 +93,12 @@
   font-weight: bold;
 }
 
-.error-message {
-  color: red;
-  font-size: 0.9em;
-  margin-top: 10px;
-}
-
-.barcode-option {
-  font-size: 0.85em;
-  color: #444;
-  margin-top: 10px;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #222;
-  color: #fff;
+  background: #000;
+  color: #888;
   font-size: 0.8em;
   padding: 5px 0;
   display: flex;
@@ -103,17 +110,17 @@ footer {
 </head>
 <body>
   <div class="logo">
-    <span class="spinner"></span>MIWITNESS
+    <span class="spinner-dot"></span>MIWITNESS
   </div>
   <div class="input-box">
     <input type="password" placeholder="INSERT KEYCODE">
     <div class="submit-box"></div>
   </div>
-  <div class="error-message">Incorrect keycode. Access denied.</div>
+  <div class="login-text">LOG IN</div>
+  <div class="circle-loader"></div>
   <div class="subtext">
-    <span>"</span>it performs to protect until you need it's protection<span>"</span>
+    <span>"</span>it performs to protect <span>Until</span> you need it's protection<span>"</span>
   </div>
-  <div class="barcode-option">Use barcode scanner instead</div>
   <footer>
     <div>DISCLAIMER</div>
     <div>miwitness.org © 2025</div>
