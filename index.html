@@ -34,6 +34,10 @@
       color: #555;
       margin-bottom: 24px;
     }
+    .quote span {
+      color: orange;
+      font-weight: bold;
+    }
     form {
       display: flex;
       flex-direction: column;
@@ -71,7 +75,13 @@
     }
   </style>
   <script>
-    function showPopup(content) {
+    function showPopup(type) {
+      let content = "";
+      if (type === 'disclaimer') {
+        content = `This system exists to defend victims of digital abuse, fraud, or coercion, and operates as a protective tool for lawful investigative and research purposes. It is not a consumer product. Any attempt by institutions, authorities, or individuals to manipulate, suppress, or interfere with access, function, or data integrity constitutes tampering with a research platform in the public interest. Logs are immutable, signals are timestamped, and circumvention attempts will be permanently recorded.`;
+      } else if (type === 'privacy') {
+        content = `This site does not use invasive cookies, tracking scripts, or third-party profiling systems. All input data remains on-device unless lawfully triggered for public interest research and threat monitoring. No user-identifiable data is stored, sold, or used for commercial purposes. By using this interface, you consent to public interest usage as protected under legal exemptions for research, journalism, safety, and statutory inquiry.`;
+      }
       alert(content);
     }
   </script>
@@ -79,14 +89,14 @@
 <body>
   <div class="container">
     <div class="logo">MIWITNESS</div>
-    <div class="quote">"it performs to protect Until you need its protection"</div>
+    <div class="quote"><span>"</span>it performs to protect <span>UNTIL YOU</span> need its protection<span>"</span></div>
     <form>
       <input type="email" placeholder="Email address" required />
       <button type="submit">Continue</button>
     </form><div class="footer">
-  <a onclick="showPopup('This system is for authorised research access only. All activity is logged. Interference, obstruction, or tampering with this platform constitutes breach of public interest integrity.')">Disclaimer</a>
+  <a onclick="showPopup('disclaimer')">Disclaimer</a>
   |
-  <a onclick="showPopup('Your input may be used in the public interest for research, protection, and investigative purposes. No individual data is stored for profiling or commercial use. By continuing, you consent to this lawful basis.')">Privacy Notice</a>
+  <a onclick="showPopup('privacy')">Privacy Notice</a>
 </div>
 
   </div>
