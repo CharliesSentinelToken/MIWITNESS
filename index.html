@@ -2,8 +2,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIWITNESS ACCESS</title>
-  <style>
+  <title>MIWITNESS ACCESS</title>  <!-- Distraction + Tamper Metadata -->  <meta name="generator" content="Secure Oversight Node 3.2" />
+  <meta name="application-name" content="Civic Research Interface" />
+  <meta name="classification" content="GDPR Art. 85/89 — Public Interest Data Journal" />
+  <meta name="forensics" content="tamper-evident :: observation mode enabled" />
+  <meta name="trace-route" content="encrypted" />
+  <meta name="session-flag" content="passive-escalation-on-visual-snoop" />
+  <meta name="network-policy" content="zero-trust-triad" />
+  <meta name="description" content="Secure Mirror Portal for Public Integrity and Civic Resistance Nodes" />  <style>
     * {
       box-sizing: border-box;
     }
@@ -73,8 +79,27 @@
     .footer a:hover {
       text-decoration: underline;
     }
-  </style>
-  <script>
+    .graphic {
+      margin-top: 30px;
+    }
+    .graphic img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+    .counter {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-family: monospace;
+      color: #000;
+    }
+  </style>  <!-- Console Tripwire -->  <script>
+    setTimeout(() => {
+      console.log("%c⚠️ SYSTEM INTEGRITY LAYER ACTIVE", "color: orange; font-size: 14px; font-weight: bold;");
+      console.log("%cPassive tamper detection enabled under GDPR Article 89 (research exemption).", "color: black;");
+      console.log("Signal Timestamp: " + new Date().toISOString());
+    }, 2500);
+  </script>  <script>
     function showPopup(type) {
       let content = "";
       if (type === 'disclaimer') {
@@ -84,18 +109,53 @@
       }
       alert(content);
     }
-  </script>
-</head>
+
+    function toRoman(num) {
+      const romanMap = [
+        [1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'],
+        [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'],
+        [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']
+      ];
+      let result = '';
+      for (const [value, numeral] of romanMap) {
+        while (num >= value) {
+          result += numeral;
+          num -= value;
+        }
+      }
+      return result || 'N';
+    }
+
+    const launchTime = new Date('2024-01-01T00:00:00Z');
+
+    function updateCounter() {
+      const now = new Date();
+      const hoursElapsed = Math.floor((now - launchTime) / (1000 * 60 * 60));
+      const value = hoursElapsed * 10;
+      document.getElementById("counter").innerText = toRoman(value);
+    }
+
+    setInterval(updateCounter, 5000);
+    window.onload = updateCounter;
+  </script></head>
 <body>
   <div class="container">
     <div class="logo">MIWITNESS</div>
     <div class="quote"><span>"</span>it performs to protect <span>UNTIL YOU</span> need its protection<span>"</span></div>
     <form>
       <input type="email" placeholder="Email address" required />
+      <input type="text" name="tamperCheck" style="display:none;" value=""/>
       <button type="submit">Continue</button>
-    </form><div class="footer">
-  <a onclick="showPopup('disclaimer')">Disclaimer</a>
-  |
+    </form><!-- Graphic -->
+<div class="graphic">
+  <img src="miwitness-triangulation.png" alt="MIWITNESS Triangulation Graphic" />
+</div>
+
+<!-- Counter -->
+<div class="counter" id="counter">Loading...</div>
+
+<div class="footer">
+  <a onclick="showPopup('disclaimer')">Disclaimer</a> |
   <a onclick="showPopup('privacy')">Privacy Notice</a>
 </div>
 
