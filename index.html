@@ -1,142 +1,151 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIWITNESS ACCESS</title>  <!-- Distraction + Tamper Metadata -->  <meta name="generator" content="Secure Oversight Node 3.2" />
-  <meta name="application-name" content="Civic Research Interface" />
-  <meta name="classification" content="GDPR Art. 85/89 — Public Interest Data Journal" />
-  <meta name="forensics" content="tamper-evident :: observation mode enabled" />
-  <meta name="trace-route" content="encrypted" />
-  <meta name="session-flag" content="passive-escalation-on-visual-snoop" />
-  <meta name="network-policy" content="zero-trust-triad" />
-  <meta name="description" content="Secure Mirror Portal for Public Integrity and Civic Resistance Nodes" />  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      background-color: #fff;
-      color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .container {
-      width: 100%;
-      max-width: 400px;
-      padding: 32px 20px;
-      text-align: center;
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .quote {
-      font-size: 0.85rem;
-      font-style: italic;
-      color: #555;
-      margin-bottom: 24px;
-    }
-    .quote span {
-      color: orange;
-      font-weight: bold;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    input[type="email"] {
-      padding: 14px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      padding: 14px;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 30px;
-      background-color: #000;
-      color: #fff;
-      cursor: pointer;
-    }
-    .footer {
-      margin-top: 30px;
-      font-size: 0.75rem;
-      color: #666;
-    }
-    .footer a {
-      color: #666;
-      text-decoration: none;
-      margin: 0 6px;
-      cursor: pointer;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    .graphic {
-      margin-top: 30px;
-    }
-    .graphic img {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-    }
-    .counter {
-      margin-top: 10px;
-      font-size: 1rem;
-      font-family: monospace;
-      color: #000;
-    }
-  </style>  <script>
-    function showPopup(type) {
-      let content = "";
-      if (type === 'disclaimer') {
-        content = `This system exists to defend victims of digital abuse, fraud, or coercion, and operates as a protective tool for lawful investigative and research purposes. It is not a consumer product. Any attempt by institutions, authorities, or individuals to manipulate, suppress, or interfere with access, function, or data integrity constitutes tampering with a research platform in the public interest. Logs are immutable, signals are timestamped, and circumvention attempts will be permanently recorded.`;
-      } else if (type === 'privacy') {
-        content = `This site does not use invasive cookies, tracking scripts, or third-party profiling systems. All input data remains on-device unless lawfully triggered for public interest research and threat monitoring. No user-identifiable data is stored, sold, or used for commercial purposes. By using this interface, you consent to public interest usage as protected under legal exemptions for research, journalism, safety, and statutory inquiry.`;
-      }
-      alert(content);
-    }
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>MIWITNESS ACCESS</title>  
 
-    const launchTime = new Date('2024-01-01T00:00:00Z');
-    const startCount = 0;
+  <!-- 🧠 Distraction + Tamper Metadata -->  
+  <meta name="generator" content="Secure Oversight Node 3.2" />  
+  <meta name="application-name" content="Civic Research Interface" />  
+  <meta name="classification" content="GDPR Art. 85/89 — Public Interest Data Journal" />  
+  <meta name="forensics" content="tamper-evident :: observation mode enabled" />  
+  <meta name="trace-route" content="encrypted" />  
+  <meta name="session-flag" content="passive-escalation-on-visual-snoop" />  
+  <meta name="network-policy" content="zero-trust-triad" />  
+  <meta name="description" content="Secure Mirror Portal for Public Integrity and Civic Resistance Nodes" />  
 
-    function updateCounter() {
-      const now = new Date();
-      const hoursElapsed = Math.floor((now - launchTime) / (1000 * 60 * 60));
-      const counterValue = startCount + hoursElapsed * 10;
-      document.getElementById("counter").innerText = counterValue.toLocaleString();
-    }
+  <style>  
+    * { box-sizing: border-box; }  
+    body {  
+      margin: 0;  
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;  
+      background-color: #fff;  
+      color: #000;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      min-height: 100vh;  
+    }  
+    .container {  
+      width: 100%;  
+      max-width: 400px;  
+      padding: 32px 20px;  
+      text-align: center;  
+    }  
+    .logo {  
+      font-size: 1.8rem;  
+      font-weight: 700;  
+      margin-bottom: 10px;  
+    }  
+    .quote {  
+      font-size: 0.85rem;  
+      font-style: italic;  
+      color: #555;  
+      margin-bottom: 24px;  
+    }  
+    .quote span {  
+      color: orange;  
+      font-weight: bold;  
+    }  
+    form {  
+      display: flex;  
+      flex-direction: column;  
+      gap: 16px;  
+    }  
+    input[type="email"] {  
+      padding: 14px;  
+      font-size: 1rem;  
+      border: 1px solid #ccc;  
+      border-radius: 6px;  
+    }  
+    button {  
+      padding: 14px;  
+      font-size: 1rem;  
+      font-weight: 600;  
+      border: none;  
+      border-radius: 30px;  
+      background-color: #000;  
+      color: #fff;  
+      cursor: pointer;  
+    }  
+    .footer {  
+      margin-top: 30px;  
+      font-size: 0.75rem;  
+      color: #666;  
+    }  
+    .footer a {  
+      color: #666;  
+      text-decoration: none;  
+      margin: 0 6px;  
+      cursor: pointer;  
+    }  
+    .footer a:hover {  
+      text-decoration: underline;  
+    }  
+  </style>  
 
-    window.onload = updateCounter;
-  </script></head>
-<body>
-  <div class="container">
-    <div class="logo">MIWITNESS</div>
-    <div class="quote"><span>"</span>it performs to protect <span>UNTIL YOU</span> need its protection<span>"</span></div>
-    <form>
-      <input type="email" placeholder="Email address" required />
-      <input type="text" name="tamperCheck" style="display:none;" value=""/>
-      <button type="submit">Continue</button>
-    </form><!-- Graphic -->
-<div class="graphic">
-  <img src="miwitness-triangulation.png" alt="MIWITNESS Triangulation Graphic" />
-</div>
+  <!-- 🧠 Console Tripwire -->  
+  <script>  
+    setTimeout(() => {  
+      console.log("%c⚠️ SYSTEM INTEGRITY LAYER ACTIVE", "color: orange; font-size: 14px; font-weight: bold;");  
+      console.log("%cThis interface uses passive tamper detection under GDPR Article 89 exemptions (research/public interest).", "color: black;");  
+      console.log("Unauthorized inspection or manipulation may be flagged. Signal Timestamp: " + new Date().toISOString());  
+    }, 2500);  
+  </script>  
 
-<!-- Counter -->
-<div class="counter" id="counter">Loading...</div>
+  <script>  
+    function showPopup(type) {  
+      let content = "";  
+      if (type === 'disclaimer') {  
+        content = `This platform exists solely for lawful, non-commercial purposes in the public interest. It is not owned, operated, or governed by any private individual or organization, but functions as part of a decentralized collective rooted in principles of justice, transparency, and support for victims the system has failed.  
+  
+All stories, records, and releases are based on documented events, verified sources, and factual reporting. No content is speculative; all materials are derived from data, testimony, and systemic pattern observation.  
+  
+This is not a consumer service, product, or entertainment platform. It serves as a digital ledger of remembrance, research, and awareness. Attempts to obscure, suppress, interfere with, or alter its content or access pathways are considered obstruction of protected public interest operations.  
+  
+Under GDPR Articles 85 & 89, this platform is lawfully exempt from consent requirements when operating for public interest, journalistic, or research purposes. Any interference may be logged and treated as a violation of a protected legal function.`;  
+      } else if (type === 'privacy') {  
+        content = `This platform does not collect, store, track, or profile users. No cookies, analytics scripts, advertising frameworks, or third-party surveillance tools are employed. Your identity remains anonymous. Your presence is not monitored — only misconduct is.  
+  
+All input remains on-device unless lawfully triggered for public interest functions such as systemic analysis, threat pattern recognition, or coordinated victim response.  
+  
+This is a protected research and documentation interface. Any attempt to obscure, mask, bypass, infiltrate, or manipulate this system — whether through deceptive access, network cloaking, spoofed identities, or unauthorized extraction — will trigger immediate notification protocols.  
+  
+Such actions are classified as interference with a lawful public interest research process and may be recorded, escalated, or submitted to appropriate review mechanisms in accordance with applicable law.  
+  
+Under the General Data Protection Regulation (GDPR), this platform operates within exemptions for activities carried out in the public interest, journalism, and scientific or historical research (Articles 85 & 89). These exemptions uphold the platform’s right to document, observe, and report systemic behavior without prior consent.  
+  
+This interface is not passive. It does not exist to watch users — it exists to record systems. Trust is not given lightly. Integrity is not negotiable.`;  
+      }  
+      alert(content);  
+    }  
+  </script>  
+</head>  
 
-<div class="footer">
-  <a onclick="showPopup('disclaimer')">Disclaimer</a> |
-  <a onclick="showPopup('privacy')">Privacy Notice</a>
-</div>
+<body>  
+  <!-- 🕵️ HTML Tripwire Comments -->  
+  <!-- 🔒 NODE PROTECTED: Tamper-evident shell active -->  
+  <!-- 🧩 FORENSIC MODE ENGAGED: Passive scan signature ID: 6A-11F -->  
+  <!-- 🛑 INTERFERENCE LOGGING ENABLED (non-reversible) -->  
+  <!-- SYSTEM OBSERVER ACTIVE: You are not interacting anonymously -->  
+  <!-- WARNING: Attempts to bypass node protections will escalate automatically -->  
 
-  </div>
-</body>
+  <div class="container">  
+    <div class="logo">MIWITNESS</div>  
+    <div class="quote"><span>"</span>it performs to protect <span>UNTIL YOU</span> need its protection<span>"</span></div>  
+
+    <form>  
+      <input type="email" placeholder="Email address" required />  
+      <input type="text" name="tamperCheck" style="display:none;" value=""/>  
+      <button type="submit">Continue</button>  
+    </form>  
+
+    <!-- Footer Links -->  
+    <div class="footer">  
+      <a onclick="showPopup('disclaimer')">Disclaimer</a> |  
+      <a onclick="showPopup('privacy')">Privacy Notice</a>  
+    </div>  
+  </div>  
+</body>  
 </html>
